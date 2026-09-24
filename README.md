@@ -3,6 +3,8 @@
 Interactive analysis of the Kaggle medical appointment no-show dataset, focused on
 factors that predict missed appointment rates by category.
 
+www.github.com/lisslatte/medical-appointment
+
 ## Project files
 
 - `medical_no_show_analysis.ipynb` - executed Jupyter notebook with data cleaning,
