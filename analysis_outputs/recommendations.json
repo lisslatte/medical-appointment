@@ -1,0 +1,60 @@
+{
+  "data_quality": {
+    "original_rows": 110527,
+    "clean_rows": 110521,
+    "invalid_age_rows": 1,
+    "invalid_wait_rows": 5,
+    "removed_rows": 6
+  },
+  "model_metrics": {
+    "roc_auc": 0.7276461774084992,
+    "average_precision": 0.35672190764233647,
+    "brier_score": 0.1446004531932952,
+    "base_rate": 0.20191089718070285,
+    "top_decile_actual_rate": 0.417390517553384,
+    "bottom_decile_actual_rate": 0.028408576856961913
+  },
+  "recommendations": {
+    "overall_rate": 0.2018982817745044,
+    "actions": [
+      {
+        "priority": "1",
+        "area": "Long lead times",
+        "evidence": "Same-day appointments missed at 4.6%, while 31+ day waits missed at 33.0%.",
+        "institute_action": "Protect near-term access, fill cancellations from a waitlist, and require active confirmation for appointments booked more than a week out."
+      },
+      {
+        "priority": "2",
+        "area": "Reminder design",
+        "evidence": "SMS-received appointments show 27.6% no-show versus 16.7% without SMS; this is likely confounded by longer waits.",
+        "institute_action": "Do not interpret this as SMS causing no-shows. Use timed, two-way reminders: booking confirmation, 72-hour confirmation, day-before reminder, and easy reschedule links."
+      },
+      {
+        "priority": "3",
+        "area": "Young and socially vulnerable groups",
+        "evidence": "The highest age band is 13-17 teen at 26.6%; scholarship patients missed at 23.7% versus 19.8% for non-scholarship patients.",
+        "institute_action": "Add friction-reducing support: flexible slots, transport guidance, caregiver contact options, and low-penalty rescheduling instead of punitive cancellation policies."
+      },
+      {
+        "priority": "4",
+        "area": "Neighborhood operations",
+        "evidence": "Among neighborhoods with at least 500 appointments, SANTOS DUMONT has the highest observed no-show rate at 28.9%.",
+        "institute_action": "Target outreach geographically: adjust reminder channels, partner with local primary-care teams, and consider transport or telehealth alternatives in persistent hot spots."
+      },
+      {
+        "priority": "5",
+        "area": "Risk scoring",
+        "evidence": "The interpretable logistic model reaches ROC AUC 0.728; its highest-risk decile misses at 41.7%.",
+        "institute_action": "Use risk tiers for operational triage, not denial of care: extra confirmations, standby lists, and compassionate rescheduling for high-risk appointments."
+      }
+    ],
+    "summary": {
+      "same_day_rate": 0.046470618743841084,
+      "long_wait_rate": 0.33002505299672386,
+      "top_age_group": "13-17 teen",
+      "top_age_rate": 0.26643544064322877,
+      "top_neighborhood": "SANTOS DUMONT",
+      "top_neighborhood_rate": 0.2891849529780564
+    }
+  }
+}
